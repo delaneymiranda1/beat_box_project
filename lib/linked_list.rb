@@ -19,7 +19,12 @@ class LinkedList
     data
   end
 
-  
+  def prepend(data)
+    new_node = Node.new(data)
+    new_node.next_node = @head
+    @head = new_node
+    data
+  end
 
   def count
     current_node = @head

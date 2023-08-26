@@ -77,7 +77,7 @@ RSpec.describe do
     expect(list.to_string).to eq('plop suu')
   end
 
-  xit 'prepends a new piece of data to the list' do
+  it 'prepends a new piece of data to the list' do
     list = LinkedList.new
     list.append('plop')
     list.append('suu')
