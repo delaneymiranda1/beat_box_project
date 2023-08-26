@@ -19,6 +19,8 @@ class LinkedList
     data
   end
 
+  
+
   def count
     current_node = @head
     count = 0
@@ -29,10 +31,6 @@ class LinkedList
     count
   end
 
-  # def to_string
-  #   current_node = @head 
-  #   current_node.data.to_s
-  # end
 
   def to_string
     current_node = @head
@@ -44,11 +42,18 @@ class LinkedList
 
     elements.join(" ")
   end
+  
 end
 
 # Ask if this is okay? It is making an empty array and shoveling the data into it
 # but join turns it back into a string
 
+
+
+# def to_string
+  #   current_node = @head 
+  #   current_node.data.to_s
+  # end
 
 # def append(data)
 #   new_node = Node.new(data) 
@@ -61,13 +66,10 @@ end
 #   data
 # end
 
-# def to_string
-#   current_node = @head
-#   elements = []
-#   while current_node
-#     elements << current_node.data
-#     current_node = current_node.next_node
-#   end
-
-#   elements.to_s
+# def prepend(data)
+#   new_node = Node.new(data)
+#   new_node.next_node = @head
+#   @head = new_node
+#   data
 # end
+  

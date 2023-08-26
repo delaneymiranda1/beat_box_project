@@ -66,4 +66,43 @@ RSpec.describe do
 
     expect(list.to_string).to eq('doop deep')
   end
+
+  it 'adds new pieces of data and converts to string' do
+    list = LinkedList.new
+    list.append('plop')
+  
+    expect(list.to_string).to eq('plop')
+    list.append('suu')
+
+    expect(list.to_string).to eq('plop suu')
+  end
+
+  xit 'prepends a new piece of data to the list' do
+    list = LinkedList.new
+    list.append('plop')
+    list.append('suu')
+    list.prepend('dop')
+
+    expect(list.to_string).to eq('dop plop suu')
+  end
+
+  xit 'tells us how many things are in the list' do
+    list = LinkedList.new
+    list.append('plop')
+    list.append('suu')
+    list.prepend('dop')
+   
+
+    expect(list.count).to eq(3)
+  end
+
+  xit 'inserts woo into element 1 in the list' do
+    list = LinkedList.new
+    list.append('plop')
+    list.append('suu')
+    list.prepend('dop')
+    list.insert(1, 'woo')
+
+    expect(list.to_string).to eq('dop woo plop suu')
+  end
 end
