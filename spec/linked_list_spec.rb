@@ -86,7 +86,7 @@ RSpec.describe do
     expect(list.to_string).to eq('dop plop suu')
   end
 
-  xit 'tells us how many things are in the list' do
+  it 'tells us how many things are in the list' do
     list = LinkedList.new
     list.append('plop')
     list.append('suu')
@@ -96,7 +96,7 @@ RSpec.describe do
     expect(list.count).to eq(3)
   end
 
-  xit 'inserts woo into element 1 in the list' do
+  it 'inserts woo into element 1 in the list' do
     list = LinkedList.new
     list.append('plop')
     list.append('suu')
