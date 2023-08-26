@@ -8,14 +8,15 @@ class LinkedList
 
   def append(data) 
     if @head.nil?
-      @head = Node.new('doop')
+      @head = Node.new(data)
     else 
-      last_node = @head
-      while last_node.next_node.nil?
-        last_node = last_node.next_node
+      current_node = @head
+      while !current_node.next_node.nil? 
+        current_node = current_node.next_node
       end
-      last_node.next_node = Node.new('doop')
+      current_node.next_node = Node.new(data)
     end
+    data
   end
 
   def count
@@ -28,15 +29,45 @@ class LinkedList
     count
   end
 
+  # def to_string
+  #   current_node = @head 
+  #   current_node.data.to_s
+  # end
+
   def to_string
     current_node = @head
     elements = []
-
-    while current_node
+   while current_node
       elements << current_node.data
       current_node = current_node.next_node
     end
 
-    elements.join(" ") 
+    elements.join(" ")
   end
 end
+
+# Ask if this is okay? It is making an empty array and shoveling the data into it
+# but join turns it back into a string
+
+
+# def append(data)
+#   new_node = Node.new(data) 
+#   if head.nil?
+#     @head = new_node
+#   else
+#     new_node.next_node = @head
+#     @head = new_node
+#   end
+#   data
+# end
+
+# def to_string
+#   current_node = @head
+#   elements = []
+#   while current_node
+#     elements << current_node.data
+#     current_node = current_node.next_node
+#   end
+
+#   elements.to_s
+# end

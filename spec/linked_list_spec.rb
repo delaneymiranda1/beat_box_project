@@ -40,5 +40,30 @@ RSpec.describe do
     expect(list.to_string).to eq('doop')
   end
 
+  it "appends a new piece of data" do
+    list = LinkedList.new
+    list.append('doop')
+    expect(list.head.data).to eq('doop')
+    expect(list.head.next_node).to eq(nil)
 
+    list.append('deep')
+    expect(list.head.next_node.data).to eq('deep')
+    expect(list.head.next_node.next_node).to eq(nil)
+  end
+  it 'tells us how many things are in the list' do
+    list = LinkedList.new
+    list.append('doop')
+    list.append('deep')
+   
+
+    expect(list.count).to eq(2)
+  end
+
+  it 'generates a string of all the elements in the list, seperated by spaces' do
+    list = LinkedList.new
+    list.append('doop')
+    list.append('deep')
+
+    expect(list.to_string).to eq('doop deep')
+  end
 end
