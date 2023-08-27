@@ -25,17 +25,22 @@ class LinkedList
     @head = new_node
     data
   end
-  # undefined method next node error, fix 
-  # def insert(position, data)
-  #   if position <= 0
-  #     prepend(data)
-  #   else
-  #     new_node = Node.new(data)
-  #     current_node = @head
-  #     next_node(position - 1)
-  #   end
+  
+  def insert(position, data)
+    if position <= 0
+      prepend(data)
+    else
+      new_node = Node.new(data)
+      current_node = @head
+    (position - 1).times do
+      break if current_node.nil? or current_node.next_node.nil?
+      current_node = current_node.next_node 
+    end
+    new_node.next_node = current_node.next_node
+    current_node.next_node = new_node
+    end
 
-  # end
+  end
 
   def count
     current_node = @head
