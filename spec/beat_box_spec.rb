@@ -21,7 +21,7 @@ RSpec.describe BeatBox do
     expect(bb.list.head).to eq(nil)
   end
 
-  it 'appends a head to the list' do
+  it 'appends new data to the list' do
     list = LinkedList.new
     bb = BeatBox.new
     node = Node.new('plop')
@@ -30,6 +30,34 @@ RSpec.describe BeatBox do
     bb.append('ditt')
 
     expect(bb.list.head.data).to eq('deep')
+    expect(bb.list.head.next_node.data).to eq('doo')
+  end
+  it 'appends new data to the list and counts it' do
+    list = LinkedList.new
+    bb = BeatBox.new
+    node = Node.new('plop')
+    bb.append('deep')
+    bb.append('doo')
+    bb.append('ditt')
+    bb.append('woo')
+    bb.append('hoo')
+    bb.append('shu')
+
+    expect(bb.count).to eq(6)
   end
   
+  it 'plays the data as sounds' do
+    list = LinkedList.new
+    bb = BeatBox.new
+    node = Node.new('plop')
+    bb.append('deep')
+    bb.append('doo')
+    bb.append('ditt')
+    bb.append('woo')
+    bb.append('hoo')
+    bb.append('shu')
+
+    expect(bb.play).to eq(6)
+  end
+
 end
