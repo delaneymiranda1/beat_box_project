@@ -105,4 +105,63 @@ RSpec.describe do
 
     expect(list.to_string).to eq('dop woo plop suu')
   end
+
+  it 'returns deep woo shi shu blop' do
+    list = LinkedList.new
+    list.append('shu')
+    list.append('blop')
+    list.prepend('deep')
+    list.insert(1, 'woo')
+    list.insert(2, 'shi')
+
+    expect(list.to_string).to eq('deep woo shi shu blop')
+  end
+
+  it 'finds elements in the list' do
+    list = LinkedList.new
+    list.append('shu')
+    list.append('blop')
+    list.prepend('deep')
+    list.insert(1, 'woo')
+    list.insert(2, 'shi')
+
+    expect(list.find(2, 1)).to eq('shi')
+    expect(list.find(1, 3)).to eq('woo shi shu')
+  end
+
+  it 'tells you whether the list includes an element' do
+    list = LinkedList.new
+    list.append('shu')
+    list.append('blop')
+    list.prepend('deep')
+    list.insert(1, 'woo')
+    list.insert(2, 'shi')
+
+    expect(list.includes?('deep')).to be true
+    expect(list.includes?('dep')).to be false
+  end
+
+  xit 'removes the last element from the list and returns it' do
+    list = LinkedList.new
+    list.append('shu')
+    list.append('blop')
+    list.prepend('deep')
+    list.insert(1, 'woo')
+    list.insert(2, 'shi')
+
+    expect(list.pop).to eq('blop')
+    expect(list.pop).to eq('shu')
+  end
+
+  xit 'returns a new string after removing two elements' do
+    list = LinkedList.new
+    list.append('shu')
+    list.append('blop')
+    list.prepend('deep')
+    list.insert(1, 'woo')
+    list.insert(2, 'shi')
+
+    expect(list.to_string).to eq('deep woo shi')
+  end
+
 end
