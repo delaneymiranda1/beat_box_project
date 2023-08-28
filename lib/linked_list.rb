@@ -71,7 +71,19 @@ class LinkedList
   end
 
   def pop
-    
+    return nil if head.nil?
+    if @head.next_node.nil?
+      data = @head.data
+      return data
+
+    end
+    current_node = @head
+    while current_node.next_node.next_node
+      current_node = current_node.next_node
+    end
+    data = current_node.next_node.data
+    current_node.next_node = nil
+    data
   end
 
   def count

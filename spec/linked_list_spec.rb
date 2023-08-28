@@ -141,7 +141,7 @@ RSpec.describe do
     expect(list.includes?('dep')).to be false
   end
 
-  xit 'removes the last element from the list and returns it' do
+  it 'removes the last element from the list and returns it' do
     list = LinkedList.new
     list.append('shu')
     list.append('blop')
@@ -153,14 +153,16 @@ RSpec.describe do
     expect(list.pop).to eq('shu')
   end
 
-  xit 'returns a new string after removing two elements' do
+  it 'returns a new string after removing two elements' do
     list = LinkedList.new
+    list.append('deep')
+    list.append('woo')
+    list.append('shi')
     list.append('shu')
     list.append('blop')
-    list.prepend('deep')
-    list.insert(1, 'woo')
-    list.insert(2, 'shi')
 
+    expect(list.pop).to eq('blop')
+    expect(list.pop).to eq('shu')
     expect(list.to_string).to eq('deep woo shi')
   end
 
