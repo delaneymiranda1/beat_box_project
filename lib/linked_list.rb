@@ -110,14 +110,14 @@ class LinkedList
 
 end
 
-  # def includes?(data)
-  #   current_node = @head 
-  #   elements = 
-  #   while current_node
-  #     return true if current_node.data == data
-        # current_node = current_node.next_node
+# def includes?(data)
+#   current_node = @head 
+#   elements = 
+#   while current_node
+#     return true if current_node.data == data
+# current_node = current_node.next_node
 
-  # end
+# end
 
 
 # Ask if this is okay? It is making an empty array and shoveling the data into it
@@ -126,9 +126,9 @@ end
 
 
 # def to_string
-  #   current_node = @head 
-  #   current_node.data.to_s
-  # end
+#   current_node = @head 
+#   current_node.data.to_s
+# end
 
 # def append(data)
 #   new_node = Node.new(data) 
