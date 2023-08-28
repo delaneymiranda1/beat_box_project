@@ -21,7 +21,6 @@ RSpec.describe BeatBox do
     expect(bb.list.head).to eq(nil)
   end
 
-  # I think that may be taking the easy route
   it 'appends a head to the list' do
     list = LinkedList.new
     bb = BeatBox.new
@@ -32,4 +31,5 @@ RSpec.describe BeatBox do
 
     expect(bb.list.head.data).to eq('deep')
   end
+  
 end

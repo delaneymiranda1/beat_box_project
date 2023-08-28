@@ -7,8 +7,9 @@ class BeatBox
   def list
     @list
   end
-  
+
   def append(data)
     list.append(data)
   end
+  
 end
