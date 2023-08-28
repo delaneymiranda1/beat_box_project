@@ -1,8 +1,8 @@
 class BeatBox
-  attr_reader :list
+  attr_reader :list, :data
   def initialize
     @list = LinkedList.new
-
+  
   end
 
 
@@ -22,5 +22,13 @@ class BeatBox
     list.count
   end
 
-  
+  def play
+    beats = list.to_string
+    beats = beats.split
+    beats.each do |beat|
+      `say -r 200 -v Boing #{beats}`
+    end
+    
+  end
+
 end

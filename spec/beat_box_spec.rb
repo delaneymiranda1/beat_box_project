@@ -40,16 +40,17 @@ RSpec.describe BeatBox do
     bb.append('woo hoo shu')
 
     expect(bb.count).to eq(6)
+    expect(bb.list.count).to eq(6)
   end
   
-  xit 'plays the data as sounds' do
+  it 'plays the data as sounds' do
     list = LinkedList.new
     bb = BeatBox.new
     node = Node.new('plop')
     bb.append('deep doo ditt')
     bb.append('woo hoo shu')
 
-    expect(bb.play).to eq(`say -r 500 -v Boing 'deep doo ditt woo hoo shu'`)
+    expect(bb.play).to eq(`say -r 200 -v Boing #{beats}`)
   end
 
 end
