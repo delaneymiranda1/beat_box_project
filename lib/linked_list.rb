@@ -41,16 +41,11 @@ class LinkedList
 
   end
 
-  def node_position(position)
-    current_node = @head
-    position.times { current_node = current_node.next_node}
-    current_node
-  end
-
   def find(position, return_count)
     return if position < 0 or position >= count or return_count <= 0
     found = []
-    current_node = node_position(position)
+    current_node = @head
+    position.times { current_node = current_node.next_node }
 
     return_count.times do 
       break if current_node.nil?

@@ -4,8 +4,11 @@
 In order to help you to organize your project, we have broken the requirements into four separate iterations. It is expected that you will complete iterations 1-3, while 4 includes extensions that represent opportunities to further explore.
 
 Iteration 1 - https://backend.turing.edu/module1/projects/beat_box/iteration_1
+
 Iteration 2 - https://backend.turing.edu/module1/projects/beat_box/iteration_2
+
 Iteration 3 - https://backend.turing.edu/module1/projects/beat_box/iteration_3
+
 Iteration 4 - https://backend.turing.edu/module1/projects/beat_box/iteration_4
 
 In addition to the functionality outlined in these iterations, we will expect the you to do the following:
