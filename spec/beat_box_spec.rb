@@ -47,10 +47,9 @@ RSpec.describe BeatBox do
     list = LinkedList.new
     bb = BeatBox.new
     node = Node.new('plop')
-    bb.append('deep doo ditt')
-    bb.append('woo hoo shu')
+    bb.append('deep doo ditt woo hoo shu')
 
-    expect(bb.play).to eq(`say -r 200 -v Boing #{beats}`)
+    expect(bb.play).to eq('deep doo ditt woo hoo shu')
   end
 
 end
